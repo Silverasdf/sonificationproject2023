@@ -9,12 +9,12 @@ import os
 from sonifyfn import sonify
 
 data_dir = '/root/SonificationProject/Data/SomeMatFiles'
-picture_out = '/root/SonificationProject/Data/sonified_spectrograms_off'
-sound_out = '/root/SonificationProject/Data/sonified_spectrograms_off'
+picture_out = '/root/SonificationProject/Data/sonified_spectrograms_on'
+sound_out = '/root/SonificationProject/Data/sonified_spectrograms_on'
 num_files = 100
 
 #Choose random file from directory
-eligible_files = [file for file in os.listdir(data_dir) if file.endswith('2.mat')]
+eligible_files = [file for file in os.listdir(data_dir) if file.endswith('1.mat')]
 
 num = 0
 for file in eligible_files:
@@ -30,7 +30,8 @@ for file in eligible_files:
         data1 = sample['data'].astype(float)
         data2 = sample2['data'].astype(float)
         for i in range(len(data1)):
-            TheData.append((data1[i] + data2[i]))
+            TheData.append(0.5*(data1[i] + data2[i]))
+
         fs = sample['samp_rate'].item()
         fs = float(fs)
         # Basically the absolute path of the file (minus the drive name) adds that to your current directory. Makes all dirs needed
