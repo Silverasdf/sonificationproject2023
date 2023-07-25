@@ -22,6 +22,8 @@ You do not have to do this, as there are a lot of extra libraries in this enviro
 
 From here, you can follow the usages of the different folders. Note different things such as directories that may need to be changed in programs.
 
+Note: For humantest.py, there are some extra steps that are beyond a conda environment. You will need to get portaudio to work with pyaudio. This can be done by following the instructions here: <https://stackoverflow.com/questions/20023131/cannot-install-pyaudio-gcc-error>
+
 ## Folders
 
 Analysis - Shows some plots
