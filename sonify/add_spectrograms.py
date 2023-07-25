@@ -22,16 +22,20 @@ for file in eligible_files:
         num += 1
         print(f'Processing file {num} of {len(eligible_files)**2}')
         filepath = os.path.join(data_dir, file).replace('\\', '/')
-        filepath2 = os.path.join(data_dir, file).replace('\\', '/')
+        filepath2 = os.path.join(data_dir, file2).replace('\\', '/')
 
         sample = sio.loadmat(filepath)
         sample2 = sio.loadmat(filepath2)
-        TheData = 0.5 * (sample['data'].astype(float) + sample2['data'].astype(float))
+        TheData = []
+        data1 = sample['data'].astype(float)
+        data2 = sample2['data'].astype(float)
+        for i in range(len(data1)):
+            TheData.append((data1[i] + data2[i]))
         fs = sample['samp_rate'].item()
         fs = float(fs)
         # Basically the absolute path of the file (minus the drive name) adds that to your current directory. Makes all dirs needed
         pOut = os.path.join(picture_out, file[:-4] + "_" + file2[:-4] + '.png')
         sOut = os.path.join(sound_out, file[:-4] + "_" + file2[:-4] + '.wav')
-        sonify(TheData, fs, sOut, pOut, N=5)
+        sonify(TheData[0], fs, sOut, pOut, N=5)
 
 
