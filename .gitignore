@@ -1,3 +1,5 @@
 Data/
 Experiments/
 lightning_logs/
+sonify/__pycache__/
+src/__pycache__/
