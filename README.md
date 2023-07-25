@@ -9,6 +9,19 @@ Later, I took different classes of spectrograms and added them together (sonify/
 
 This project was done as part of a 10-week internship at ORNL
 
+## Usage
+
+To use any of this code, it is recommended that you download conda and run the following commands:
+
+```bash
+conda env create -f environment.yml
+conda activate pytorch
+```
+
+You do not have to do this, as there are a lot of extra libraries in this environment, but I know that running in this environment works.
+
+From here, you can follow the usages of the different folders. Note different things such as directories that may need to be changed in programs.
+
 ## Folders
 
 Analysis - Shows some plots
