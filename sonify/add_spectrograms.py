@@ -16,6 +16,24 @@ num_files = 100
 #Choose random file from directory
 eligible_files = [file for file in os.listdir(data_dir) if file.endswith('1.mat')]
 
+# This can be used for just one file
+# num = 0
+# for file in eligible_files:
+#     num += 1
+#     print(f'Processing file {num} of {len(eligible_files)}')
+#     filepath = os.path.join(data_dir, file).replace('\\', '/')
+
+#     sample = sio.loadmat(filepath)
+#     TheData = []
+#     data1 = sample['data'].astype(float)
+
+#     fs = sample['samp_rate'].item()
+#     fs = float(fs)
+#     # Basically the absolute path of the file (minus the drive name) adds that to your current directory. Makes all dirs needed
+#     pOut = os.path.join('/root/SonificationProject/Data/test_wavs/on_wavs', file[:-4] + '.png')
+#     sOut = os.path.join('/root/SonificationProject/Data/test_wavs/on_wavs', file[:-4] + '.wav')
+#     sonify(data1[0], fs, sOut, pOut, N=5)
+
 num = 0
 for file in eligible_files:
     for file2 in eligible_files:

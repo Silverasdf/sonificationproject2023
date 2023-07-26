@@ -22,8 +22,6 @@ You do not have to do this, as there are a lot of extra libraries in this enviro
 
 From here, you can follow the usages of the different folders. Note different things such as directories that may need to be changed in programs.
 
-Note: For humantest.py, there are some extra steps that are beyond a conda environment. You will need to get portaudio to work with pyaudio. This can be done by following the instructions here: <https://stackoverflow.com/questions/20023131/cannot-install-pyaudio-gcc-error>
-
 ## Folders
 
 Analysis - Shows some plots
@@ -34,6 +32,8 @@ config - Config file for the Image Classification
 ## src and config
 
 All of these files are modifications of my other repo: <https://github.com/Silverasdf/blurimageproject2023>
+That is, except for:
+humantest.py - This program is a tool for a human subject test. There are 3 tests provided. Output is a .csv file.
 
 ## sonify
 
