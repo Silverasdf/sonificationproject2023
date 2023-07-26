@@ -33,7 +33,7 @@ config - Config file for the Image Classification
 
 All of these files are modifications of my other repo: <https://github.com/Silverasdf/blurimageproject2023>
 That is, except for:
-humantest.py - This program is a tool for a human subject test. There are 3 tests provided. Output is a .csv file.
+humantest.py - This program is a tool for a human subject test. There are 3 tests provided. Output is a .csv file. This puts all wav files to test in a results folder, rather than playing them within Python. This is because pyaudio can be difficult to set up, depending on the OS you decide to use.
 
 ## sonify
 
